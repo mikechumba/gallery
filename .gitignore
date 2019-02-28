@@ -1,0 +1,8 @@
+# environments
+virtual/
+
+# editor settings
+.vscode/
+
+# files
+start.sh
