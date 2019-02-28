@@ -1,3 +1,8 @@
 from django.test import TestCase
 
-# Create your tests here.
+from .models import Image,Location,Category
+
+class ImageTest(TestCase):
+
+   def create_test(self):
+      image
