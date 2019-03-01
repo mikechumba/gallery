@@ -41,12 +41,12 @@ class Image(models.Model):
    def delete_image(self):
       self.delete()
 
-   def update_image(id):
-      return self.update
+   def update_image(self):
+      return self.save()
 
    @classmethod
    def get_image_by_id(cls,id):
-      image = cls.objects.get_or_404(id)
+      image = cls.filter_by(pk=id)[:5]
       return image
 
    @classmethod
