@@ -1,0 +1,17 @@
+{% extends "photos/layout.html" %}
+{% load static %}
+{& load media &}
+
+{% block content %}
+   <nav>
+      <div class="logo">
+         <img src="{% static 'images/logo.png' %}" alt="">
+      </div>   
+   </nav>  
+
+   <div class="images">
+      {% for image in images  %}
+         <img src="{ image.image.url }" alt="">
+      {% endfor %}
+   </div>
+{% endblock %}

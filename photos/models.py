@@ -7,11 +7,19 @@ class Location(models.Model):
    '''
    location_name = models.CharField(max_length=50)
 
+   def __str__(self):
+      return self.location_name
+
 class Category(models.Model):
    '''
    Database model for category data
    '''
    category_name = models.CharField(max_length=50)
+
+   def __str__(self):
+      return self.category_name
+   class Meta:
+      verbose_name_plural = "Categories"
 
 class Image(models.Model):
    '''
@@ -22,6 +30,10 @@ class Image(models.Model):
    description = models.CharField(max_length=50)
    locale = models.ForeignKey(Location, on_delete=models.CASCADE) 
    category =  models.ForeignKey(Category, on_delete=models.CASCADE)
+
+
+   def __str__(self):
+      return self.image_name
 
    def save_image(self):
       self.save()

@@ -1,0 +1,33 @@
+// Colors
+$font: 'Open Sans', sans-serif;
+
+// Colors
+
+$main: #403F4C;
+$second: #B76D68;
+$text: #484848;
+
+
+@mixin fonts($color,$size,$weight,$family) {
+   font-family: $family;
+   font-size: $size;
+   font-weight: $weight;
+   color: $color;
+}
+
+
+body {
+   margin: 0;
+   padding: 0;
+}
+
+.logo {
+   width: 100px;
+   height: 100px;
+   overflow: hidden;
+   img {
+      width: 100%;
+   }
+}
+
+
