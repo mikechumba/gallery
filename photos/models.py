@@ -18,6 +18,11 @@ class Category(models.Model):
 
    def __str__(self):
       return self.category_name
+
+   @classmethod
+   def search_category(cls,cat):
+      category = cls.objects.filter(category__unaccent__icontains=cat)
+      return category
    class Meta:
       verbose_name_plural = "Categories"
 
@@ -51,7 +56,7 @@ class Image(models.Model):
 
    @classmethod
    def search_image(cls,cat):
-      images = cls.objects.filter(category__unaccent__icontains=cat)
+      images = cls.objects.filter(category__category_id__unaccent__icontains=cat)
       return images
 
    @classmethod

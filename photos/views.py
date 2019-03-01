@@ -15,6 +15,7 @@ def search(request):
 
    if 'search_category' in request.GET and request.GET["search_category"]:
       searched = request.GET.get("search_category")
+      category = Category
       images = Image.search_image(searched)
 
       context = {
