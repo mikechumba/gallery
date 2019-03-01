@@ -12,4 +12,20 @@ body {
 .logo img {
   width: 100%;
 }
+
+.container {
+  margin: 2% 2.5%;
+}
+
+.image-card {
+  display: inline-block;
+  width: 32%;
+  height: 400px;
+  overflow: hidden;
+  margin: 0.5%;
+}
+
+.image-card img {
+  height: 100%;
+}
 /*# sourceMappingURL=style.css.map */

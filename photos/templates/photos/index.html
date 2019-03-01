@@ -1,17 +1,22 @@
 {% extends "photos/layout.html" %}
 {% load static %}
-{& load media &}
 
 {% block content %}
-   <nav>
+   <nav class="container">
       <div class="logo">
          <img src="{% static 'images/logo.png' %}" alt="">
-      </div>   
+      </div>
+      <div class="page-actions">
+         form
+         <i class="fas fa-search"></i>
+      </div>
    </nav>  
 
-   <div class="images">
-      {% for image in images  %}
-         <img src="{{ image.image.url }}" alt="{{ image.image_name }}">
+   <div class="container images">
+      {% for img in images  %}
+         <div class="image-card">
+            <img src="{{ img.image.url }}" alt="{{ img.image_name }}">
+         </div>
       {% endfor %}
    </div>
 {% endblock %}
