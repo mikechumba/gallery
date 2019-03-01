@@ -10,3 +10,7 @@ def home(request):
    }
 
    return render(request, 'photos/index.html', context)
+
+def search(request,category):
+   
+   return render(request, 'photos/search.html', context)
