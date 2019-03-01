@@ -1,0 +1,12 @@
+{% extends "photos/layout.html" %}
+{% load static %}
+
+{% block content %}
+
+   {% for img in images %}
+      <div class="image-card">
+         <img src="{{ img.image.url }}" alt="">
+      </div>
+   {% endfor %}
+   
+{% endblock %}

@@ -5,7 +5,8 @@ from django.urls import path,include
 from . import views
 
 urlpatterns = [
-   path('', views.home, name="photos'home")
+   path('', views.home, name="photo_home"),
+   path('search/',views.search, name='photo_search')
 ]
 
 if settings.DEBUG:

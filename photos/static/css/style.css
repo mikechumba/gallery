@@ -3,10 +3,19 @@ body {
   padding: 0;
 }
 
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
 .logo {
   width: 25px;
   height: 25px;
   overflow: hidden;
+  vertical-align: middle;
 }
 
 .logo img {
@@ -26,6 +35,75 @@ body {
 }
 
 .image-card img {
+  height: 100%;
+}
+
+nav .logo, nav .page-actions {
+  display: inline-block;
+}
+
+nav .page-actions fieldset {
+  border: 1px solid #403F4C;
+  border-radius: 16px;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav .page-actions fieldset input {
+  padding: 6px 8px;
+  background: transparent;
+  border: none;
+}
+
+nav .page-actions fieldset input:focus {
+  outline: none;
+  background: transparent;
+}
+
+nav .page-actions fieldset input::-webkit-input-placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(64, 63, 76, 0.5);
+}
+
+nav .page-actions fieldset input:-ms-input-placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(64, 63, 76, 0.5);
+}
+
+nav .page-actions fieldset input::-ms-input-placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(64, 63, 76, 0.5);
+}
+
+nav .page-actions fieldset input::placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(64, 63, 76, 0.5);
+}
+
+nav .page-actions fieldset button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  vertical-align: middle;
+}
+
+nav .page-actions fieldset button i {
+  padding: 6px 7px;
+  vertical-align: middle;
+  color: #403F4C;
+}
+
+nav .page-actions fieldset button:hover {
+  color: #B76D68;
+  background: rgba(64, 63, 76, 0.2);
   height: 100%;
 }
 /*# sourceMappingURL=style.css.map */

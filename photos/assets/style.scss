@@ -8,7 +8,7 @@ $second: #B76D68;
 $text: #484848;
 
 
-@mixin fonts($color,$size,$weight,$family) {
+@mixin fonts($color,$size,$weight,$family: $font) {
    font-family: $family;
    font-size: $size;
    font-weight: $weight;
@@ -21,10 +21,19 @@ body {
    padding: 0;
 }
 
+.left {
+   float: left;
+}
+
+.right {
+   float: right;
+}
+
 .logo {
    width: 25px;
    height: 25px;
    overflow: hidden;
+   vertical-align: middle;
    img {
       width: 100%;
    }
@@ -45,4 +54,45 @@ body {
    }
 }
 
+nav {
+   .logo, .page-actions {
+      display: inline-block;
+   }
 
+   .page-actions {
+      fieldset {
+         border: 1px solid $main; 
+         border-radius: 16px;
+         padding: 0;
+         overflow: hidden;
+         input {
+            padding: 6px 8px;
+            background: transparent;
+            border: none;
+            &:focus {
+               outline: none;
+               background: transparent;
+            }
+            &::placeholder {
+               @include fonts(rgba($main,0.5),13px,500);
+            }
+         }
+         button {
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            vertical-align: middle;
+            i {
+               padding: 6px 7px;
+               vertical-align: middle;
+               color: $main;
+            }
+            &:hover {
+               color: $second;
+               background: rgba($main,0.2);
+               height: 100%;
+            }
+         }
+      }
+   }
+}
