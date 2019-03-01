@@ -22,3 +22,27 @@ class Image(models.Model):
    description = models.CharField(max_length=50)
    locale = models.ForeignKey(Location, on_delete=models.CASCADE) 
    category =  models.ForeignKey(Category, on_delete=models.CASCADE)
+
+   def save_image(self):
+      self.save()
+
+   def delete_image(self):
+      self.delete()
+
+   def update_image(id):
+      return self.update
+
+   @classmethod
+   def get_image_by_id(cls,id):
+      image = cls.objects.get_or_404(id)
+      return image
+
+   @classmethod
+   def search_image(cls,category):
+      image = Image
+      return image
+
+   @classmethod
+   def filter_by_location(cls,location):
+      image = Image
+      return image
