@@ -3,10 +3,13 @@
 
 {% block content %}
 
-   {% for img in images %}
-      <div class="image-card">
-         <img src="{{ img.image.url }}" alt="">
-      </div>
-   {% endfor %}
+   {% if images %}
+      <h1>Here a some images within the <span>{{ searched }} </span>category.</h1>
+      {% for img in images %}
+         <div class="image-card">
+            <img src="{{ img.image.url }}" alt="{{ img.image_name }}">
+         </div>
+      {% endfor %}  
+   {% endif %}
    
 {% endblock %}

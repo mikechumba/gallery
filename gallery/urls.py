@@ -16,11 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
-from django.urls import path,include
+from django.urls import path,include,url
 
 urlpatterns = [
-    path('photos/', include('photos.urls')),
-    path('admin/', admin.site.urls),
+    url(r'^photos/', include('photos.urls')),
+    url(r'^admin/', admin.site.urls),
 ] 
 
 if settings.DEBUG:

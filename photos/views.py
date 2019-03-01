@@ -11,7 +11,7 @@ def home(request):
 
    return render(request, 'photos/index.html', context)
 
-def search(request,category):
+def search(request):
 
    if 'search_category' in request.GET and request.GET["search_category"]:
       searched = request.GET.get("search_category")
@@ -27,5 +27,3 @@ def search(request,category):
    else:
       msg = "You didn't search for anything"
       return render(request, 'all-news/search.html', {"msg": msg})
-   
-   return render(request, 'photos/search.html', context)

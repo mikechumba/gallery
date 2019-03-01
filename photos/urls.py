@@ -1,12 +1,12 @@
 from django.conf import settings
 from django.conf.urls.static import static
-from django.urls import path,include
+from django.urls import path,include,url
 
 from . import views
 
 urlpatterns = [
-   path('', views.home, name="photo_home"),
-   path('search/',views.search, name='photo_search')
+   url('^$', views.home, name="photo_home"),
+   url('^search/',views.search, name='photo_search')
 ]
 
 if settings.DEBUG:
