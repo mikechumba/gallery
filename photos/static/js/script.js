@@ -1,8 +1,13 @@
 
 $('.image-card').on('click', () => {
-   $('.modal').show()
+   $('.modal').fadeIn(1000)
 })
 
 $('.close').on('click', () => {
-   $('.modal').hide()
+   $('.modal').fadeOut()
+})
+
+
+$('.selectfield').on('change', () => {
+   (this).submit()
 })

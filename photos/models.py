@@ -10,6 +10,11 @@ class Location(models.Model):
    def __str__(self):
       return self.location_name
 
+   @classmethod
+   def get_location(cls,location):
+      location = cls.objects.filter(location_name=location)
+      return location
+
 class Category(models.Model):
    '''
    Database model for category data
@@ -61,5 +66,5 @@ class Image(models.Model):
 
    @classmethod
    def filter_by_location(cls,location):
-      image = Image
+      image = cls.objects.filter(locale=location)
       return image

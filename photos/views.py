@@ -2,11 +2,27 @@ from django.shortcuts import render
 
 from .models import Image,Category,Location
 
+def get_locations(location):
+   locale = Location.get_location(location) 
+   return locale  
+
 def home(request):
-   images = Image.objects.order_by('-pk')[:10]
+
+   locations = Location.objects.all()
+
+   if 'location' in request.GET and request.GET["location"]:
+      selected = request.GET.get("location")
+      locale = get_locations(selected)
+      if locale:
+         images = Image.filter_by_location(locale[0])
+      else:
+         images = Image.objects.order_by('-pk')[:10]
+   else:
+      images = Image.objects.order_by('-pk')[:10]
 
    context = {
-      'images': images
+      'images': images,
+      'locations': locations
    }
 
    return render(request, 'photos/index.html', context)

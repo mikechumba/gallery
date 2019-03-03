@@ -157,3 +157,44 @@ nav {
    }
    
 }
+
+.filter {
+   form {
+      div,select{
+         display: inline-block;
+      }
+      select {
+         border: 1px solid $main; 
+         border-radius: 16px;
+         padding: 6px 8px;
+         background: transparent;
+         &:focus {
+            outline: none;
+            background: transparent;
+         }
+         &::placeholder {
+            @include fonts(rgba($main,0.5),13px,500);
+         }
+      }
+      option {
+         border: none;
+         background-color: #fff;
+         padding: 2px 4px;
+         @include fonts($main,13px,500);
+      }
+   }
+   .filter-label {
+      i,p {
+         display: inline-block;
+      }
+      i {
+         margin-right: 3px;
+         font-size: 13px;
+         vertical-align: middle;
+      }
+      p {
+         margin-right: 5px;
+         @include fonts($main,13px,600);
+      }
+   }
+}

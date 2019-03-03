@@ -181,4 +181,76 @@ nav .page-actions fieldset button:hover {
   font-size: 18px;
   text-align: left;
 }
+
+.filter form div, .filter form select {
+  display: inline-block;
+}
+
+.filter form select {
+  border: 1px solid #004346;
+  border-radius: 16px;
+  padding: 6px 8px;
+  background: transparent;
+}
+
+.filter form select:focus {
+  outline: none;
+  background: transparent;
+}
+
+.filter form select::-webkit-input-placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(0, 67, 70, 0.5);
+}
+
+.filter form select:-ms-input-placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(0, 67, 70, 0.5);
+}
+
+.filter form select::-ms-input-placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(0, 67, 70, 0.5);
+}
+
+.filter form select::placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(0, 67, 70, 0.5);
+}
+
+.filter form option {
+  border: none;
+  background-color: #fff;
+  padding: 2px 4px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #004346;
+}
+
+.filter .filter-label i, .filter .filter-label p {
+  display: inline-block;
+}
+
+.filter .filter-label i {
+  margin-right: 3px;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.filter .filter-label p {
+  margin-right: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #004346;
+}
 /*# sourceMappingURL=style.css.map */
