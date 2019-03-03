@@ -24,6 +24,8 @@
          </div>
 
       {% endfor %}  
+   {% else %}
+      <h1>There are no images with that <span>{{ searched }}</span> category</h1>
    {% endif %}
    
 {% endblock %}

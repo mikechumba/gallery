@@ -16,7 +16,10 @@ def search(request):
    if 'search_category' in request.GET and request.GET["search_category"]:
       searched = request.GET.get("search_category")
       category = Category.search_category(searched)
-      images = Image.search_image(category[0])
+      if category:
+         images = Image.search_image(category[0])
+      else:
+         images = None
 
       context = {
          "searched":searched,
