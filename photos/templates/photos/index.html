@@ -2,25 +2,36 @@
 {% load static %}
 
 {% block content %}
-   <nav class="container">
-      <div class="logo">
-         <img src="{% static 'images/logo.png' %}" alt="">
-      </div>
-      <div class="page-actions right">
-         <form action="{% url 'photo_search' %}" method="get" role="search">
-            <fieldset>
-               <input type="text" class="search" name="search_category" placeholder="Search for a Category">
-               <button type="submit"><i class="fas fa-search"></i></button>
-            </fieldset>
-         </form>
-      </div>
-   </nav>  
+    {% include "photos/nav.html" %} 
 
    <div class="container images">
       {% for img in images  %}
          <div class="image-card">
-            <img src="{{ img.image.url }}" alt="{{ img.image_name }}">
+            <img src="{{ img.image.url }}" alt="{{ img.image_name }}" name={{ img.id }}>
          </div>
+
+         <div class="modal">
+            <div class="modal-card">
+               <div class="modal-image left">
+                  <img src="{{ img.image.url }}" alt="">
+               </div>
+               
+               <div class="description right">
+                  <div class="top-icons">
+                     <div class="clipboard">
+                        <i class="fas fa-clipboard"></i>
+                     </div>
+                     <div class="close">
+                        <i class="fas fa-times"></i>
+                     </div>
+                  </div>
+
+                  <h5>{{ img.image_name }}</h5>
+                  <p>{{ img.description }}</p>
+               </div>
+            </div>
+         </div>
+
       {% endfor %}
    </div>
 {% endblock %}

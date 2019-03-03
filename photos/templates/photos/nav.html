@@ -1,0 +1,15 @@
+{% load static %}
+
+<nav class="container">
+   <div class="logo">
+      <img src="{% static 'images/logo.png' %}" alt="">
+   </div>
+   <div class="page-actions right">
+      <form action="{% url 'photo_search' %}" method="get" role="search">
+         <fieldset>
+            <input type="text" class="search" name="search_category" placeholder="Search for a Category">
+            <button type="submit"><i class="fas fa-search"></i></button>
+         </fieldset>
+      </form>
+   </div>
+</nav>

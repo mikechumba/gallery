@@ -16,14 +16,14 @@ def search(request):
    if 'search_category' in request.GET and request.GET["search_category"]:
       searched = request.GET.get("search_category")
       category = Category.search_category(searched)
-      images = Image.search_image(category.id)
+      images = Image.search_image(category[0])
 
       context = {
          "searched":searched,
          "images": images
       }
 
-      return render(request, 'all-news/search.html', context)
+      return render(request, 'photos/search.html', context)
 
    else:
       msg = "You didn't search for anything"
