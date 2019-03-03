@@ -3,7 +3,7 @@ $font: 'Open Sans', sans-serif;
 
 // Colors
 
-$main: #403F4C;
+$main: #004346;
 $second: #B76D68;
 $text: #484848;
 
@@ -44,6 +44,7 @@ body {
 }
 
 .image-card {
+   cursor: pointer;
    display: inline-block;
    width: 32%;
    height: 400px;

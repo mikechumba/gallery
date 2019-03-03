@@ -21,7 +21,7 @@ class Category(models.Model):
 
    @classmethod
    def search_category(cls,cat):
-      category = cls.objects.filter(category__unaccent__icontains=cat)
+      category = cls.objects.filter(category_name__unaccent__icontains=cat)
       return category
    class Meta:
       verbose_name_plural = "Categories"
@@ -56,7 +56,7 @@ class Image(models.Model):
 
    @classmethod
    def search_image(cls,cat):
-      images = cls.objects.filter(category__category_id__unaccent__icontains=cat)
+      images = cls.objects.filter(category_id=cat)
       return images
 
    @classmethod

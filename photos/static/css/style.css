@@ -27,6 +27,7 @@ body {
 }
 
 .image-card {
+  cursor: pointer;
   display: inline-block;
   width: 32%;
   height: 400px;
@@ -43,7 +44,7 @@ nav .logo, nav .page-actions {
 }
 
 nav .page-actions fieldset {
-  border: 1px solid #403F4C;
+  border: 1px solid #004346;
   border-radius: 16px;
   padding: 0;
   overflow: hidden;
@@ -64,28 +65,28 @@ nav .page-actions fieldset input::-webkit-input-placeholder {
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
   font-weight: 500;
-  color: rgba(64, 63, 76, 0.5);
+  color: rgba(0, 67, 70, 0.5);
 }
 
 nav .page-actions fieldset input:-ms-input-placeholder {
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
   font-weight: 500;
-  color: rgba(64, 63, 76, 0.5);
+  color: rgba(0, 67, 70, 0.5);
 }
 
 nav .page-actions fieldset input::-ms-input-placeholder {
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
   font-weight: 500;
-  color: rgba(64, 63, 76, 0.5);
+  color: rgba(0, 67, 70, 0.5);
 }
 
 nav .page-actions fieldset input::placeholder {
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
   font-weight: 500;
-  color: rgba(64, 63, 76, 0.5);
+  color: rgba(0, 67, 70, 0.5);
 }
 
 nav .page-actions fieldset button {
@@ -98,12 +99,12 @@ nav .page-actions fieldset button {
 nav .page-actions fieldset button i {
   padding: 6px 7px;
   vertical-align: middle;
-  color: #403F4C;
+  color: #004346;
 }
 
 nav .page-actions fieldset button:hover {
   color: #B76D68;
-  background: rgba(64, 63, 76, 0.2);
+  background: rgba(0, 67, 70, 0.2);
   height: 100%;
 }
 /*# sourceMappingURL=style.css.map */
