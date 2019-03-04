@@ -4,19 +4,34 @@
 {% block content %}
    {% include "photos/nav.html" %}
 
+   <div class="container">
+
    {% if images %}
       <h1>Here a some images within the <span>{{ searched }} </span>category.</h1>
       {% for img in images %}
-         <div class="image-card">
+         <div class="image-card" id={{img.id}}>
             <img src="{{ img.image.url }}" alt="{{ img.image_name }}">
          </div>
 
-         <div class="modal">
+         <div class="modal hidden" id="{{ img.id }}">
             <div class="modal-card">
-               <div class="modal-image">
+               <div class="modal-image left">
                   <img src="{{ img.image.url }}" alt="">
                </div>
-               <div class="description">
+               
+               <div class="description right">
+                  <div class="top-icons">
+                     <div class="clipboard">
+                        <i class="fas fa-clipboard"></i>
+                        <p class="alert-copied">
+                           Link copied!
+                        </p>
+                     </div>
+                     <div class="close">
+                        <i class="fas fa-times"></i>
+                     </div>
+                  </div>
+
                   <h5>{{ img.image_name }}</h5>
                   <p>{{ img.description }}</p>
                </div>
@@ -27,5 +42,9 @@
    {% else %}
       <h1>There are no images with that <span>{{ searched }}</span> category</h1>
    {% endif %}
+
+
+   </div>
+
    
 {% endblock %}

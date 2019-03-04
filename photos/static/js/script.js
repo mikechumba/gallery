@@ -1,13 +1,27 @@
 
+
 $('.image-card').on('click', () => {
-   $('.modal').fadeIn(1000)
+   let $id = $(this.event.currentTarget).attr('id');
+   let $src = $(this.event.currentTarget).attr('src');
+   let $modalId = $(`#image${$id}`);
+   // alert($modalId);
+   $id.fadeIn(600);
 })
 
 $('.close').on('click', () => {
-   $('.modal').fadeOut()
+   $('.modal').fadeOut();
+})
+
+$('.selectfield').on('change', () => {
+   (this).submit();
 })
 
 
-$('.selectfield').on('change', () => {
-   (this).submit()
+$('.clipboard').on('click', () => {
+   var $temp = $("<input>");
+   $("body").append($temp);
+   $temp.val($(element).text()).select();
+   document.execCommand("copy");
+   $temp.remove();
+   $('.alert-copied').show()
 })
