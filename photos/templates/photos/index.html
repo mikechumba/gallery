@@ -21,11 +21,11 @@
 
    <div class="container images">
       {% for img in images  %}
-         <div class="image-card" id="{{ img.id }}" >
+         <div class="image-card" id="a{{ img.id }}" >
             <img src="{{ img.image.url }}" alt="{{ img.image_name }}" id="image{{ img.id }}" name="image" data-target="#{{ img.id }}" data-toggle="modal">
          </div>
 
-         <div class="modal hidden" id="{{ img.id }}">
+         <div class="modal hidden" id="image-a{{ img.id }}">
             <div class="modal-card">
                <div class="modal-image left">
                   <img src="{{ img.image.url }}" alt="">

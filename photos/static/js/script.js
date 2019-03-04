@@ -3,9 +3,9 @@
 $('.image-card').on('click', () => {
    let $id = $(this.event.currentTarget).attr('id');
    let $src = $(this.event.currentTarget).attr('src');
-   let $modalId = $(`#image${$id}`);
-   // alert($modalId);
-   $id.fadeIn(600);
+   let modalId = '#image-'+$id;
+   alert(modalId);
+   $('#image-'+$id).fadeIn(600);
 })
 
 $('.close').on('click', () => {

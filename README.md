@@ -41,7 +41,7 @@ If you feel like using this project as your own you can do so, following the ins
 
 This project requires that you have python 3.6+ set up. You can follow the instructions [here]('realpython.com/installing-python/') to achieve that, if you haven't.
 
-You will also need to install Django. Follow the instructions [here]('https://www.djangoproject.com/start/')
+You will also need to install Django. Follow the instructions [here]('https://www.djangoproject.com/start/').
 
 ### Debugging
 
