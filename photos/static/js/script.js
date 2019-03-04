@@ -2,7 +2,6 @@
 
 $('.image-card').on('click', () => {
    let $id = $(this.event.currentTarget).attr('id');
-   let $src = $(this.event.currentTarget).attr('src');
    $('#image-'+$id).fadeIn(600);
 })
 
@@ -15,11 +14,10 @@ $('.selectfield').on('change', () => {
 })
 
 
-$('.clipboard').on('click', () => {
-   var $temp = $("<input>");
-   $("body").append($temp);
-   $temp.val($(element).text()).select();
+$('.fa-clipboard').on('click', () => {
+   let $id = $(this.event.currentTarget).attr('id');
+   let link = document.getElementById('url-'+$id);
+   link.select();
    document.execCommand("copy");
-   $temp.remove();
-   $('.alert-copied').show()
+   alert("Link has been copied! "+link);
 })
