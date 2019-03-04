@@ -2,7 +2,7 @@
 
 ###### Authored by Michael Kipchumba
 
-A blog app built using Flask.
+A personal gallery web app.
 
 [Live Site]('https://shashin.herokuapp.com/')
 
