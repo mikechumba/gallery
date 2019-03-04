@@ -30,7 +30,7 @@ body {
   cursor: pointer;
   display: inline-block;
   width: 32%;
-  height: 400px;
+  height: 395px;
   overflow: hidden;
   margin: 0.5%;
 }
@@ -115,9 +115,11 @@ nav .page-actions fieldset button:hover {
 .modal {
   position: fixed;
   top: 0;
+  margin: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(51, 51, 51, 0.3);
+  background-color: rgba(51, 51, 51, 0.9);
 }
 
 .modal .modal-card {

@@ -29,6 +29,8 @@ def home(request):
 
 def search(request):
 
+   locations = Location.objects.all()
+
    if 'search_category' in request.GET and request.GET["search_category"]:
       searched = request.GET.get("search_category")
       category = Category.search_category(searched)
@@ -39,7 +41,8 @@ def search(request):
 
       context = {
          "searched":searched,
-         "images": images
+         "images": images,
+         'locations': locations
       }
 
       return render(request, 'photos/search.html', context)

@@ -1,0 +1,24 @@
+<div class="modal hidden" id="image-a{{ img.id }}">
+   <div class="modal-card">
+      <div class="modal-image left">
+         <img src="{{ img.image.url }}" alt="">
+      </div>
+      
+      <div class="description right">
+         <div class="top-icons">
+            <div class="clipboard">
+               <i class="fas fa-clipboard"></i>
+               <p class="alert-copied">
+                  Link copied!
+               </p>
+            </div>
+            <div class="close">
+               <i class="fas fa-times"></i>
+            </div>
+         </div>
+
+         <h5>{{ img.image_name }}</h5>
+         <p>{{ img.description }}</p>
+      </div>
+   </div>
+</div>

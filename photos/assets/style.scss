@@ -47,7 +47,7 @@ body {
    cursor: pointer;
    display: inline-block;
    width: 32%;
-   height: 400px;
+   height: 395px;
    overflow: hidden;
    margin: 0.5%;
    img {
@@ -105,9 +105,11 @@ nav {
 .modal {
    position: fixed;
    top: 0;
+   margin: 0;
+   left: 0;
    width: 100%;
    height: 100%;
-   background-color: rgba(#333,0.3);
+   background-color: rgba(#333,0.9);
 
    .modal-card{
       background-color: #fff;

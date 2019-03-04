@@ -4,52 +4,11 @@
 {% block content %}
    {% include "photos/nav.html" %} 
 
-   <div class="filter container">
-      <form action="{% url 'photo_home' %}" method="get" class="selectfield">
-         <div class="filter-label">
-            <i class="fas fa-filter"></i>
-            <p>Filter</p>
-         </div>
-         <select name="location" onchange="this.form.submit()">
-            <option value="" disabled selected>Select a Location</option>
-            {% for location in locations %}
-               <option value="{{ location.location_name }}">{{ location.location_name }}</option>
-            {% endfor %}
-         </select>
-      </form>
-   </div>
+   {% include "photos/filter.html" %}
 
    <div class="container images">
-      {% for img in images  %}
-         <div class="image-card" id="a{{ img.id }}" >
-            <img src="{{ img.image.url }}" alt="{{ img.image_name }}" id="image{{ img.id }}" name="image" data-target="#{{ img.id }}" data-toggle="modal">
-         </div>
 
-         <div class="modal hidden" id="image-a{{ img.id }}">
-            <div class="modal-card">
-               <div class="modal-image left">
-                  <img src="{{ img.image.url }}" alt="">
-               </div>
-               
-               <div class="description right">
-                  <div class="top-icons">
-                     <div class="clipboard">
-                        <i class="fas fa-clipboard"></i>
-                        <p class="alert-copied">
-                           Link copied!
-                        </p>
-                     </div>
-                     <div class="close">
-                        <i class="fas fa-times"></i>
-                     </div>
-                  </div>
+      {% include "photos/images.html" %}
 
-                  <h5>{{ img.image_name }}</h5>
-                  <p>{{ img.description }}</p>
-               </div>
-            </div>
-         </div>
-
-      {% endfor %}
    </div>
 {% endblock %}

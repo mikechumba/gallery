@@ -1,0 +1,14 @@
+<div class="filter container">
+   <form action="{% url 'photo_home' %}" method="get" class="selectfield">
+      <div class="filter-label">
+         <i class="fas fa-filter"></i>
+         <p>Filter</p>
+      </div>
+      <select name="location" onchange="this.form.submit()">
+         <option value="" disabled selected>Select a Location</option>
+         {% for location in locations %}
+            <option value="{{ location.location_name }}">{{ location.location_name }}</option>
+         {% endfor %}
+      </select>
+   </form>
+</div>
