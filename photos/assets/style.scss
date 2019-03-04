@@ -208,3 +208,10 @@ nav {
    background-color: $main;
    display: none;
 }
+
+.search-message {
+   @include fonts(rgba($main,0.8),30px,700);
+   span {
+      @include fonts($main,30px,700);
+   }
+}

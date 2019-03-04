@@ -7,7 +7,7 @@
    <div class="container">
 
    {% if images %}
-      <h1>Here a some images within the <span>{{ searched }} </span>category.</h1>
+      <h1 class="search-message">Here a some images within the <span>{{ searched }} </span>category.</h1>
       {% for img in images %}
          <div class="image-card" id={{img.id}}>
             <img src="{{ img.image.url }}" alt="{{ img.image_name }}">
