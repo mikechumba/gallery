@@ -19,5 +19,5 @@ $('.fa-clipboard').on('click', () => {
    let link = document.getElementById('url-'+$id);
    link.select();
    document.execCommand("copy");
-   alert("Link has been copied! "+link);
+   alert("Link has been copied!");
 })

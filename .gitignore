@@ -6,3 +6,6 @@ virtual/
 
 # files
 start.sh
+
+
+.env
