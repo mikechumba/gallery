@@ -125,6 +125,7 @@ nav {
       }
 
       .description {
+         float: right;
          margin: 0 1.5%;
          width: 23%;
          h5 {
@@ -208,6 +209,10 @@ nav {
    }
 }
 
+.link-field {
+   opacity: 0;
+}
+
 .alert-copied {
    background-color: $main;
    display: none;
@@ -219,5 +224,211 @@ nav {
    @include fonts(rgba($main,0.8),30px,700);
    span {
       @include fonts($main,30px,700);
+   }
+}
+
+@media screen and (max-width: 480px) {
+   .image-card {
+      cursor: pointer;
+      display: inline-block;
+      width: 48%;
+      height: 180px;
+      overflow: hidden;
+      margin: 0.5%;
+      img {
+         height: 100%;
+      }
+   }
+   
+   nav {
+      margin-top: 4%;
+   }
+
+   .container {
+      margin: 2% 2.5%;
+   }
+
+   .filter {
+      margin: 3% 2.5%;
+      text-align: right;
+   }
+
+   .modal {
+      position: fixed;
+      top: 0;
+      margin: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(#333,0.9);
+   
+      .modal-card{
+         background-color: #fff;
+         width: 80%;
+         margin: 40% auto;
+         overflow: hidden;
+         .modal-image {
+            width: 100%;
+            overflow: hidden;
+            img {
+               width: 100%;
+            }
+         }
+   
+         .description {
+            margin: 0 2%;
+            width: 96%;
+            h5 {
+               margin-top: 20px;
+               @include fonts(#333,15px,700);
+            }
+            p {
+               margin-top: 4px;
+               @include fonts(#333,13px,500);
+            }
+   
+            .top-icons {
+               width: 100%;
+               color: $main;
+               margin: 2% 0;
+               vertical-align: middle;
+               div {
+                  display: inline-block;
+               }
+               .close {
+                  width: 10%;
+                  cursor: pointer;
+                  i {
+                     font-size: 20px;
+                     text-align: right;
+                  }
+               }
+               .clipboard {
+                  cursor: pointer;
+                  width: 90%;
+                  i {
+                     padding: 4px;
+                     border-radius: 50%;
+                     font-size: 18px;
+                     text-align: left;
+                  }
+               }
+            }
+         }
+      }
+      
+   }
+
+   .search-message {
+      @include fonts(rgba($main,0.8),18px,700);
+      span {
+         @include fonts($main,18px,700);
+      }
+   }
+
+}
+
+@media screen and (max-width: 768px) {
+   .image-card {
+      cursor: pointer;
+      display: inline-block;
+      width: 48%;
+      height: 280px;
+      overflow: hidden;
+      margin: 0.5%;
+      img {
+         height: 100%;
+      }
+   }
+   
+   nav {
+      margin-top: 4%;
+   }
+
+   .container {
+      margin: 2% 2.5%;
+   }
+
+   .filter {
+      margin: 3% 2.5%;
+      text-align: right;
+   }
+
+   .top-icons {
+      width: 98%;
+   }
+
+   .modal {
+      position: fixed;
+      top: 0;
+      margin: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(#333,0.9);
+   
+      .modal-card{
+         background-color: #fff;
+         width: 80%;
+         margin: 40% auto;
+         overflow: hidden;
+         .modal-image {
+            width: 100%;
+            overflow: hidden;
+            img {
+               width: 100%;
+            }
+         }
+   
+         .description {
+            clear: left;
+            margin: 0 2%;
+            width: 96%;
+            h5 {
+               margin-top: 20px;
+               @include fonts(#333,15px,700);
+            }
+            p {
+               margin-top: 4px;
+               @include fonts(#333,13px,500);
+            }
+   
+            .top-icons {
+               width: 100%;
+               color: $main;
+               margin: 2% 0;
+               vertical-align: middle;
+               div {
+                  display: inline-block;
+               }
+               .close {
+                  width: 10%;
+                  cursor: pointer;
+                  i {
+                     font-size: 20px;
+                     text-align: right;
+                  }
+               }
+               .clipboard {
+                  cursor: pointer;
+                  width: 90%;
+                  i {
+                     padding: 4px;
+                     border-radius: 50%;
+                     font-size: 18px;
+                     text-align: left;
+                  }
+               }
+            }
+         }
+      }
+      
+   }
+
+   .search-message {
+      @include fonts(rgba($main,0.8),18px,700);
+      span {
+         @include fonts($main,18px,700);
+      }
    }
 }

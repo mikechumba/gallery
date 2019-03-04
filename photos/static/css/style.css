@@ -139,6 +139,7 @@ nav .page-actions fieldset button:hover {
 }
 
 .modal .modal-card .description {
+  float: right;
   margin: 0 1.5%;
   width: 23%;
 }
@@ -263,6 +264,10 @@ nav .page-actions fieldset button:hover {
   color: #452344;
 }
 
+.link-field {
+  opacity: 0;
+}
+
 .alert-copied {
   background-color: #452344;
   display: none;
@@ -285,5 +290,215 @@ nav .page-actions fieldset button:hover {
   font-size: 30px;
   font-weight: 700;
   color: #452344;
+}
+
+@media screen and (max-width: 480px) {
+  .image-card {
+    cursor: pointer;
+    display: inline-block;
+    width: 48%;
+    height: 180px;
+    overflow: hidden;
+    margin: 0.5%;
+  }
+  .image-card img {
+    height: 100%;
+  }
+  nav {
+    margin-top: 4%;
+  }
+  .container {
+    margin: 2% 2.5%;
+  }
+  .filter {
+    margin: 3% 2.5%;
+    text-align: right;
+  }
+  .modal {
+    position: fixed;
+    top: 0;
+    margin: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(51, 51, 51, 0.9);
+  }
+  .modal .modal-card {
+    background-color: #fff;
+    width: 80%;
+    margin: 40% auto;
+    overflow: hidden;
+  }
+  .modal .modal-card .modal-image {
+    width: 100%;
+    overflow: hidden;
+  }
+  .modal .modal-card .modal-image img {
+    width: 100%;
+  }
+  .modal .modal-card .description {
+    margin: 0 2%;
+    width: 96%;
+  }
+  .modal .modal-card .description h5 {
+    margin-top: 20px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #333;
+  }
+  .modal .modal-card .description p {
+    margin-top: 4px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #333;
+  }
+  .modal .modal-card .description .top-icons {
+    width: 100%;
+    color: #452344;
+    margin: 2% 0;
+    vertical-align: middle;
+  }
+  .modal .modal-card .description .top-icons div {
+    display: inline-block;
+  }
+  .modal .modal-card .description .top-icons .close {
+    width: 10%;
+    cursor: pointer;
+  }
+  .modal .modal-card .description .top-icons .close i {
+    font-size: 20px;
+    text-align: right;
+  }
+  .modal .modal-card .description .top-icons .clipboard {
+    cursor: pointer;
+    width: 90%;
+  }
+  .modal .modal-card .description .top-icons .clipboard i {
+    padding: 4px;
+    border-radius: 50%;
+    font-size: 18px;
+    text-align: left;
+  }
+  .search-message {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgba(69, 35, 68, 0.8);
+  }
+  .search-message span {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #452344;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .image-card {
+    cursor: pointer;
+    display: inline-block;
+    width: 48%;
+    height: 280px;
+    overflow: hidden;
+    margin: 0.5%;
+  }
+  .image-card img {
+    height: 100%;
+  }
+  nav {
+    margin-top: 4%;
+  }
+  .container {
+    margin: 2% 2.5%;
+  }
+  .filter {
+    margin: 3% 2.5%;
+    text-align: right;
+  }
+  .top-icons {
+    width: 98%;
+  }
+  .modal {
+    position: fixed;
+    top: 0;
+    margin: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(51, 51, 51, 0.9);
+  }
+  .modal .modal-card {
+    background-color: #fff;
+    width: 80%;
+    margin: 40% auto;
+    overflow: hidden;
+  }
+  .modal .modal-card .modal-image {
+    width: 100%;
+    overflow: hidden;
+  }
+  .modal .modal-card .modal-image img {
+    width: 100%;
+  }
+  .modal .modal-card .description {
+    clear: left;
+    margin: 0 2%;
+    width: 96%;
+  }
+  .modal .modal-card .description h5 {
+    margin-top: 20px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #333;
+  }
+  .modal .modal-card .description p {
+    margin-top: 4px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #333;
+  }
+  .modal .modal-card .description .top-icons {
+    width: 100%;
+    color: #452344;
+    margin: 2% 0;
+    vertical-align: middle;
+  }
+  .modal .modal-card .description .top-icons div {
+    display: inline-block;
+  }
+  .modal .modal-card .description .top-icons .close {
+    width: 10%;
+    cursor: pointer;
+  }
+  .modal .modal-card .description .top-icons .close i {
+    font-size: 20px;
+    text-align: right;
+  }
+  .modal .modal-card .description .top-icons .clipboard {
+    cursor: pointer;
+    width: 90%;
+  }
+  .modal .modal-card .description .top-icons .clipboard i {
+    padding: 4px;
+    border-radius: 50%;
+    font-size: 18px;
+    text-align: left;
+  }
+  .search-message {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgba(69, 35, 68, 0.8);
+  }
+  .search-message span {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #452344;
+  }
 }
 /*# sourceMappingURL=style.css.map */
