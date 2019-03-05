@@ -4,7 +4,7 @@
 
 A personal gallery web app.
 
-[Live Site]('https://tasweer.herokuapp.com/')
+[Live Site]('tasweer.herokuapp.com/')
 
 ### Project Approach
    
