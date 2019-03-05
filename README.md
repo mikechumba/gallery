@@ -4,7 +4,7 @@
 
 A personal gallery web app.
 
-[Live Site]('www.tasweer.herokuapp.com/')
+[Live Site](www.tasweer.herokuapp.com/)
 
 ### Project Approach
    
@@ -29,7 +29,7 @@ A personal gallery web app.
 
 ###### Additional Tools
 
-- Fonts from [Google Fonts]('fonts.google.com')
+- Fonts from [Google Fonts](fonts.google.com)
 
 ### Setting Up
 
@@ -39,9 +39,9 @@ If you feel like using this project as your own you can do so, following the ins
    - `git clone https://github.com/mikechumba/gallery/`
    - `cd <your-dir>/gallery`
 
-This project requires that you have python 3.6+ set up. You can follow the instructions [here]('realpython.com/installing-python/') to achieve that, if you haven't.
+This project requires that you have python 3.6+ set up. You can follow the instructions [here](realpython.com/installing-python/) to achieve that, if you haven't.
 
-You will also need to install Django. Follow the instructions [here]('https://www.djangoproject.com/start/').
+You will also need to install Django. Follow the instructions [here](https://www.djangoproject.com/start/).
 
 ### Debugging
 
