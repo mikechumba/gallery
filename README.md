@@ -4,7 +4,7 @@
 
 A personal gallery web app.
 
-[Live Site]('https://shashin.herokuapp.com/')
+[Live Site]('https://tasweer.herokuapp.com/')
 
 ### Project Approach
    

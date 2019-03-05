@@ -15,6 +15,16 @@ def create_category_instance():
    new_category = Category(category_name = "Travel")
    return new_category
 
+class LocationTest(TestCase):
+
+   def setUp(self):
+      self.new_location = create_location_instance()
+      
+   def test_location_instance(self):
+      self.assertTrue(isinstance(self.new_location,Location))
+
+   def test_save_location(self):
+
 class ImageTest(TestCase):
 
    def setUp(self):
@@ -23,4 +33,10 @@ class ImageTest(TestCase):
       self.new_image = create_image_instance(location,category)
 
    def test_instance(self):
-      self.assertTrue(isinstance(self.image,Image))
+      self.assertTrue(isinstance(self.new_image,Image))
+
+
+   def test_save_image(self):
+      self.new_image.save_image()
+      images = Image.objects.all()
+      self.assertTrue(len(self.images),1)
